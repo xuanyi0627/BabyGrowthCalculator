@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AO4-eD-hrD">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="D6M-VH-13d">
+            <objects>
+                <viewController id="AO4-eD-hrD" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jdc-oL-RBu"/>
+                        <viewControllerLayoutGuide type="bottom" id="YJg-Xn-ovl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KOM-HS-e22">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="daR-RI-o3T">
+                                <rect key="frame" x="128" y="28" width="456" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dsd-KS-F8H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUO-Rp-v7u">
+                                <rect key="frame" x="16" y="28" width="76" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cTF-3t-dPT"/>
+                                    <constraint firstAttribute="width" constant="76" id="qIO-CC-RW0"/>
+                                </constraints>
+                                <state key="normal" title="日期">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="PrA-DG-DSO">
+                                <rect key="frame" x="0.0" y="360" width="600" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="263" id="1e5-hU-CEy"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="450947220.86927199">
+                                    <!--2015-04-17 07:07:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Yq-ck-2aE">
+                                <rect key="frame" x="16" y="118" width="568" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="pL1-ax-afe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjI-j3-20Q">
+                                <rect key="frame" x="248" y="221" width="105" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="JhU-0h-TB9"/>
+                                    <constraint firstAttribute="height" constant="38" id="R9T-89-tiU"/>
+                                </constraints>
+                                <state key="normal" title="计算">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="CountButPress:" destination="AO4-eD-hrD" eventType="touchUpInside" id="bKb-py-qA1"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1Cd-yN-il1">
+                                <rect key="frame" x="148" y="82" width="305" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="O4X-Ro-h2Q"/>
+                                    <constraint firstAttribute="width" constant="305" id="T72-Ya-40T"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="末次"/>
+                                    <segment title="预产"/>
+                                    <segment title="出生"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="daR-RI-o3T" firstAttribute="leading" secondItem="eUO-Rp-v7u" secondAttribute="trailing" constant="36" id="4Bd-jY-vBi"/>
+                            <constraint firstItem="daR-RI-o3T" firstAttribute="top" secondItem="jdc-oL-RBu" secondAttribute="bottom" constant="8" id="CI3-YC-crO"/>
+                            <constraint firstItem="PrA-DG-DSO" firstAttribute="leading" secondItem="KOM-HS-e22" secondAttribute="leading" id="Hzj-Km-jOB"/>
+                            <constraint firstItem="9Yq-ck-2aE" firstAttribute="leading" secondItem="KOM-HS-e22" secondAttribute="leadingMargin" id="LUn-84-8GT"/>
+                            <constraint firstItem="eUO-Rp-v7u" firstAttribute="leading" secondItem="KOM-HS-e22" secondAttribute="leadingMargin" id="Na3-Ln-Vt0"/>
+                            <constraint firstAttribute="trailing" secondItem="PrA-DG-DSO" secondAttribute="trailing" id="OzO-y8-BIi"/>
+                            <constraint firstAttribute="centerX" secondItem="kjI-j3-20Q" secondAttribute="centerX" constant="-0.5" id="alt-8C-6Zn"/>
+                            <constraint firstItem="kjI-j3-20Q" firstAttribute="top" secondItem="9Yq-ck-2aE" secondAttribute="bottom" constant="47" id="d9n-dj-dYn"/>
+                            <constraint firstItem="9Yq-ck-2aE" firstAttribute="top" secondItem="daR-RI-o3T" secondAttribute="bottom" constant="60" id="eNR-OF-6t3"/>
+                            <constraint firstItem="1Cd-yN-il1" firstAttribute="top" secondItem="daR-RI-o3T" secondAttribute="bottom" constant="24" id="fTN-UQ-xk6"/>
+                            <constraint firstItem="daR-RI-o3T" firstAttribute="trailing" secondItem="KOM-HS-e22" secondAttribute="trailingMargin" id="hdX-mI-t4m"/>
+                            <constraint firstAttribute="centerX" secondItem="1Cd-yN-il1" secondAttribute="centerX" constant="-0.5" id="nEN-mJ-czT"/>
+                            <constraint firstItem="YJg-Xn-ovl" firstAttribute="top" secondItem="PrA-DG-DSO" secondAttribute="bottom" id="pu9-CF-dTn"/>
+                            <constraint firstItem="eUO-Rp-v7u" firstAttribute="top" secondItem="jdc-oL-RBu" secondAttribute="bottom" constant="8" id="ySD-Jv-rBH"/>
+                            <constraint firstItem="9Yq-ck-2aE" firstAttribute="trailing" secondItem="KOM-HS-e22" secondAttribute="trailingMargin" id="z8o-mr-qUf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countBut" destination="kjI-j3-20Q" id="lVH-Qr-8WU"/>
+                        <outlet property="dateField" destination="daR-RI-o3T" id="b7C-qd-yNd"/>
+                        <outlet property="datePicker" destination="PrA-DG-DSO" id="ZYL-r5-MeW"/>
+                        <outlet property="resultLabel" destination="9Yq-ck-2aE" id="IIY-1X-3VI"/>
+                        <outlet property="stageSelectBut" destination="1Cd-yN-il1" id="676-St-vRa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q5x-PF-57k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2789" y="2485"/>
+        </scene>
+    </scenes>
+</document>
